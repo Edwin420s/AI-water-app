@@ -22,8 +22,7 @@ A modern React frontend application for monitoring water reservoirs in your area
 
 1. **Clone or download the project files**
    ```bash
-   # If you have git installed
-   git clone <repository-url>
+   git clone https://github.com/Edwin420s/AI-water-app
    cd water-reservoir-app
    ```
 
