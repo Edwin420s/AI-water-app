@@ -1,0 +1,198 @@
+.reservoir-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reservoir-header h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.reservoir-header p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.capacity-section {
+  margin-bottom: 24px;
+}
+
+.capacity-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.capacity-label {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.capacity-value {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.capacity-details {
+  text-align: right;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.status-section {
+  margin-bottom: 24px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+}
+
+.runout-section {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--light-blue);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.runout-section h4 {
+  color: var(--dark-gray);
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.runout-date {
+  color: var(--primary-blue);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.runout-warning {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.warning-text {
+  color: #f57c00;
+}
+
+.critical-text {
+  color: #d32f2f;
+}
+
+.reservoir-details {
+  margin: 20px 0;
+  padding: 16px;
+  background: var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+/* Water Quality Indicators */
+.quality-excellent {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.quality-good {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.quality-fair {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.quality-poor {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.quality-critical {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Enhanced Detail Items */
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 120px;
+  margin-right: 15px;
+}
+
+.detail-value {
+  color: var(--text-primary);
+  text-align: right;
+  flex: 1;
+  word-break: break-word;
+}
+
+.card-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.expand-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .reservoir-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .capacity-value {
+    font-size: 1.1rem;
+  }
+  
+  .runout-section {
+    padding: 12px;
+  }
+  
+  .reservoir-details {
+    padding: 12px;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .detail-label {
+    min-width: auto;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .detail-value {
+    text-align: left;
+  }
+}

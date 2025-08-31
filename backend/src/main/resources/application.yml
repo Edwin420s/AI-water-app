@@ -1,0 +1,60 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: water-reservoir-backend
+  
+  datasource:
+    url: jdbc:h2:mem:waterdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+  
+  security:
+    user:
+      name: admin
+      password: admin123
+
+# JWT Configuration
+jwt:
+  secret: waterReservoirSecretKey2024KenyaWaterManagementSystem
+  expiration: 86400000 # 24 hours in milliseconds
+
+# CORS Configuration
+cors:
+  allowed-origins: http://localhost:3000
+  allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+  allowed-headers: "*"
+
+# Inflection AI Configuration
+inflection:
+  api:
+    key: Q89ycThV5pPkWJpNQczYmuLMG4NufpHIsGJQGSmZYQ
+    endpoint: https://api.inflection.ai/v1/chat/completions
+    model: inflection_3_pi
+    timeout: 30000 # 30 seconds
+
+# Logging
+logging:
+  level:
+    com.waterapp: DEBUG
+    org.springframework.security: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
